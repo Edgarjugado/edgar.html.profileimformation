@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap');
+
+
+.body h1{
+    font-weight: 300;
+    color: royalblue;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+</style>
+
+<style>
+main{
+    width: 100%;
+    height: 400vh;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.loader{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    perspective: 800px;
+}
+
+.loader .item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+@keyframes animation{
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+main .h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+main .card{
+    background:linear-gradient( 90deg, rgb(5, 5, 184),rgb(156, 28, 28), rgb(69, 204, 42) );
+    animation: animation 3s infinite ease-in-out;
+    width: 1100px;
+    height: 2000px;
+    background-size: 300% 300%;
+    border-radius: 3%;
+    position: relative;
+}
+
+.card line{
+    height: 300px;
+    width: 1px;
+    color: black;
+}
+
+.card img{
+    border-radius: 100%;
+    width: 200px;
+    height: 10%;
+    position:absolute;
+    top: -135px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.profiletitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.cardbdy{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+.lines{
+    width: 2px;
+    height: 220px;
+    background-color: black;
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+i{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.fa-square-facebook{
+    color: blue;
+}
+
+.fa-instagram{
+    color: orangered;
+}
+
+.fa-envelope{
+    color: blue;
+}
+
+main .evidence{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+    position: relative;
+}
+
+.evidence h2{
+    left: 2%;
+    transform: translateX(2%);
+}
+
+.evidence li{
+    color: white;
+    left: -3%;
+    transform: translateX(-3%);
+    position: relative;
+}
+
+.evidence img{
+    position: absolute;
+    position: inherit;
+    left: 15%;
+    transform: translateX(15%);
+    height: 200px;
+    width: 80%;
+    border-radius: 0%;
+    cursor: pointer;
+}
+
+
+.works{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.info{
+    left: 30%;
+    transform: translateX(12%);
+}
+
+.info h2{
+    color: black;
+}
+
+.works h1{
+    color: white;
+}
+
+.info i{
+    font-size: 25px;
+    color: black;
+}
+
+.info a{
+    color: white;
+}
+
+.offer h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.offerinformation li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.REMINDER{
+    transform: translateX(13%);
+    color: black;
+}
+
+.REMINDER p{
+    left: 27%;
+    transform: translateX(27%);
+}
+
+.CONTACT {
+    left: 72%;
+    transform: translateX(72%);
+}
+
+.CONTACT a{
+    color: white;
+}
+
+.fa-phone-volume{
+    font-size: 25px;
+    color: blue;
+}
+
+.fa-phone-volume a{
+    color: black;
+}
+
+
+.fa-at{
+    color: blue;
+    font-size: 25px;
+    position: relative;
+}
+
+
+.fa-at a{
+    position: relative;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.name p{
+    color: black;
+}
+</style>
+<body>
+    <h1>Front-end Web Developer</h1>
+    </body>
+    <main>
+        <div class="loader">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <h3></h3>
+        <div class="card">
+            <img src="./img/edgar16kyut.jpg" alt="profile">
+            <div class="profiletitle">
+                <h1 style="font-weight: 600;">Edgar P. Jugado Jr.</h1>
+                <h2 style="font-weight: 300;font-size: 20px;">Web Developer</h2>
+                <h3 style="font-weight: 200; font-size: 18px;" >All information about me included in below</h3>
+            </div>
+            <div class="cardbdy">
+            <div class="skills">
+                <h2>SKILLS</h2>
+                <ul>
+                    <li>Reacts</li>
+                    <li>Javascript</li>
+                    <li>ExpressJS</li>
+                    <li>Python</li>
+                    <li>.NET</li>
+                    <li>Javapress</li>
+                    <li>Github</li>
+                </ul>
+            </div>
+            <div class="lines"></div>
+            <div class="hobbies">
+                <h2>HOBBIES</h2>
+                <ul>
+                    <li>Tiktok</li>
+                    <li>Youtube</li>
+                    <li>Facebook</li>
+                    <li>Basketbal</li>
+                    <li>Eating</li>
+                    <li>Reading</li>
+                    <li>Make a Web</li>
+                </ul>
+                </div>
+                <div class="lines"></div>
+                <div class="ACHIEVEMENTS">
+                    <h2>ACHIEVEMENTS</h2>
+                    <li>G-7 TOP 2</li>
+                    <li>G-8 top 1</li>
+                    <li>G-9 TOP 8</li>
+                    <li>G-10 TO 11 <BR>(TOP 15 )</li>
+                    <li>G-12 TOP 5 <br>( WITH HONORS )</li>
+                </div>
+                
+            </div> 
+            <br>
+                        <div class="socials">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <br>
+            <div class="evidence">
+                <h2>Achievements Evidences </h2>
+                <ul>
+                    <li>grade-7 im top 2 whit an avarage of 90%</li>
+                    <img src="/pictures/G-9 grade.jpg" alt="">
+                    <li>GRADE-8 im top 1 with an avarage of 91%</li>
+                    <img src="/pictures/grade 100.jpg" alt="">
+                    <li>GRADE-12 now im belong in the with honores with an avarage of 92%</li>
+                    <img src="/pictures/grade 111.jpg" alt="">
+                </ul>
+            </div>
+            <br>
+            <div class="works">
+                <h1>WHAT CAN I OFFER TO YOU?</h1>
+            </div>
+            <div class="info">
+                <h2>Here We Out:</h2>
+                <div class="words"></div>
+            <br>
+                <i class="fa-solid fa-location-arrow"></i> Custom Web Application
+            </div>
+            <div class="info">
+                <i  class="fa-solid fa-location-arrow"></i>  Implementing Design
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-location-arrow"></i> Ecommerce Web Development
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-location-arrow"></i> Web Designing
+            </div>
+            
+            <br>
+            <div class="offer">
+                <h1>WEB FEUTURES</h1>
+                <div class="offerinformation">
+                    <li style="font-weight: 600; ">Page Quality</li>
+                    <li style="font-weight: 600;">Strong CTA</li>
+                    <li style="font-weight: 600;">User Experience</li>
+                    <li style="font-weight: 600;">Accessibility</li>
+                </div>
+            </div>
+            <br>
+            <div class="REMINDER">
+                <p style="font-weight: bold; font-size: large;">FOR FROPESSIONAL PURPOSES</p>
+            </div>
+            <br>
+            <div class="CONTACT">
+                <i class="fa-solid fa-phone-volume"></i> <a href="09150683843"> 09150683843</a>
+                <br>
+                <i class="fa-regular fa-at"> </i><a href="edgarjugado0505@gmail.com"> edgarjugado0505@gmail.com</a>
+        </div>
+        <br>
+        <div class="name">
+            <p style="font-weight: 600;">Edgar_Dev2023</p>
+        </div>
+            </div>
+            </div>
+    </main>
+</body>
+</html>
